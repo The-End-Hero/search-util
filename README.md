@@ -6,7 +6,7 @@
 [![NPM downloads](http://img.shields.io/npm/dm/verify.svg?style=flat-square)](http://www.npmtrends.com/verify)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/xiping.wang/verify.svg)](http://isitmaintained.com/project//The-End-Hero/verify "Percentage of issues still open")
 
-多环境的，简单无依赖的前端搜索库，支持拼音模糊搜索。
+多环境的，简单无依赖的前端搜索库，支持中英文,支持拼音模糊搜索。
 
 ## 使用者指南
 通过npm下载安装代码

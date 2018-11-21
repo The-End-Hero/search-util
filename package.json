@@ -1,7 +1,7 @@
 {
   "name": "search-util",
-  "version": "0.1.0",
-  "description": "最好用的js第三方库脚手架",
+  "version": "0.1.1",
+  "description": "多环境的，简单无依赖的前端搜索库，支持中英文,支持拼音模糊搜索。",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
