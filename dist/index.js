@@ -1,8 +1,8 @@
 /*!
- * verify 0.1.0 (https://github.com/xiping.wang/verify)
- * API https://github.com/xiping.wang/verify/blob/master/doc/api.md
+ * search-util 0.1.1 (https://github.com/xiping.wang/search-util)
+ * API https://github.com/xiping.wang/search-util/blob/master/doc/api.md
  * Copyright 2017-2018 xiping.wang. All Rights Reserved
- * Licensed under MIT (https://github.com/xiping.wang/verify/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/xiping.wang/search-util/blob/master/LICENSE)
  */
 
 'use strict';
@@ -987,7 +987,7 @@ Pinyin.search = function (str, search) {
  * 搜索字段
  * @param arr 搜索数组 [{...},{...},...]
  * @param search 需要搜索内容
- * @param key 字段
+ * @param key 字段 默认id
  * @returns {*}
  */
 Pinyin.getFilterArr = function (arr, search, key = 'id') {

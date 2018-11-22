@@ -1,10 +1,10 @@
 # [search-util](https://github.com/The-End-Hero/search-util)
 [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/The-End-Hero/search-util)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com//The-End-Hero/verify/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/xiping.wang/verify.svg?branch=master)](https://travis-ci.org/xiping.wang/verify)
-[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/verify)
-[![NPM downloads](http://img.shields.io/npm/dm/verify.svg?style=flat-square)](http://www.npmtrends.com/verify)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/xiping.wang/verify.svg)](http://isitmaintained.com/project//The-End-Hero/verify "Percentage of issues still open")
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com//The-End-Hero/search-util/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/xiping.wang/search-util.svg?branch=master)](https://travis-ci.org/xiping.wang/search-util)
+[![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/search-util)
+[![NPM downloads](http://img.shields.io/npm/dm/search-util.svg?style=flat-square)](http://www.npmtrends.com/search-util)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/xiping.wang/search-util.svg)](http://isitmaintained.com/project//The-End-Hero/search-util "Percentage of issues still open")
 
 多环境的，简单无依赖的前端搜索库，支持中英文,支持拼音模糊搜索。
 
