@@ -1,6 +1,6 @@
 {
   "name": "search-util",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "多环境的，简单无依赖的前端搜索库，支持中英文,支持拼音模糊搜索。",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
