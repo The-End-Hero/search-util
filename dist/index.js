@@ -1,5 +1,5 @@
 /*!
- * search-util 0.1.1 (https://github.com/xiping.wang/search-util)
+ * search-util 0.1.2 (https://github.com/xiping.wang/search-util)
  * API https://github.com/xiping.wang/search-util/blob/master/doc/api.md
  * Copyright 2017-2018 xiping.wang. All Rights Reserved
  * Licensed under MIT (https://github.com/xiping.wang/search-util/blob/master/LICENSE)
