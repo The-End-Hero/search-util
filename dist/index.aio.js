@@ -1002,11 +1002,11 @@
         if (!search) return arr;
         // let rslt = filter(arr, t => get(t, key) && (get(t, key) + "").indexOf(search) != -1);
         let rslt = arr.filter(t => {
-            t[key] && (t[key] + "").indexOf(search) != -1;
+            return t[key] && (t[key] + "").indexOf(search) != -1;
         });
         if (rslt.length === 0) {
             rslt = arr.filter(t => {
-                Pinyin.search(t[key], search);
+                return Pinyin.search(t[key], search);
             });
         }
         return rslt;
