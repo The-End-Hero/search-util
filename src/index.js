@@ -1,7 +1,7 @@
 // import {get} from 'lodash'
 
-let Pinyin = (function () {
-    let Pinyin = function (ops) {
+let SearchUtil = (function () {
+    let SearchUtil = function (ops) {
             this.initialize(ops);
         },
 
@@ -11,7 +11,7 @@ let Pinyin = (function () {
         };
 
 
-    Pinyin.fn = Pinyin.prototype = {
+    SearchUtil.fn = SearchUtil.prototype = {
         init: function (ops) {
             this.options = extend(options, ops);
         },
@@ -898,13 +898,13 @@ let Pinyin = (function () {
         return dst;
     };
 
-    return new Pinyin(arguments);
+    return new SearchUtil(arguments);
 })();
 
 function compare(val1, val2) {
     // 转换为拼音
-    val1 = Pinyin.getFullChars(val1).toLowerCase();
-    val2 = Pinyin.getFullChars(val2).toLowerCase();
+    val1 = SearchUtil.getFullChars(val1).toLowerCase();
+    val2 = SearchUtil.getFullChars(val2).toLowerCase();
 
     // 获取较长的拼音的长度
     let length = val1.length > val2.length ? val1.length : val2.length;
@@ -926,7 +926,7 @@ function compare(val1, val2) {
     }
 }
 
-Pinyin.compare = compare;
+SearchUtil.compare = compare;
 
 function adjustHanzi(ch) {
     let unicode = ch.charCodeAt(0);
@@ -967,17 +967,17 @@ function compareAll(val1, val2) {
     }
 }
 
-Pinyin.compareAll = compareAll;
+SearchUtil.compareAll = compareAll;
 
-Pinyin.sort = function (obj, key) {
+SearchUtil.sort = function (obj, key) {
     return obj && obj.sort((a, b) => compareAll(a[key], b[key]));
 }
 
-Pinyin.search = function (str, search) {
-    let namePinYin = str && Pinyin.getFullChars(str).toLowerCase();
-    namePinYin = namePinYin || '';
-    let searchStrPinYin = Pinyin.getFullChars(search).toLowerCase();
-    return namePinYin.indexOf(searchStrPinYin) != -1;
+SearchUtil.search = function (str, search) {
+    let nameSearchUtil = str && SearchUtil.getFullChars(str).toLowerCase();
+    nameSearchUtil = nameSearchUtil || '';
+    let searchStrSearchUtil = SearchUtil.getFullChars(search).toLowerCase();
+    return nameSearchUtil.indexOf(searchStrSearchUtil) != -1;
 }
 /**
  * 搜索字段
@@ -986,7 +986,7 @@ Pinyin.search = function (str, search) {
  * @param key 字段 默认id
  * @returns {*}
  */
-Pinyin.getFilterArr = function (arr, search, key = 'id') {
+SearchUtil.getFilterArr = function (arr, search, key = 'id') {
     if (!Array.isArray(arr)) {
         console.error(`arr is not Array`)
         return arr;
@@ -998,7 +998,7 @@ Pinyin.getFilterArr = function (arr, search, key = 'id') {
     });
     if (rslt.length === 0) {
         rslt = arr.filter((t) => {
-            return (Pinyin.search(t[key], search))
+            return (SearchUtil.search(t[key], search))
         })
     }
     return rslt
@@ -1009,7 +1009,7 @@ Pinyin.getFilterArr = function (arr, search, key = 'id') {
  * @param search 需要搜索内容
  * @returns {*}
  */
-Pinyin.getFilterArrAll = function (arr, search) {
+SearchUtil.getFilterArrAll = function (arr, search) {
     if (!Array.isArray(arr)) {
         console.error(`arr is not Array`)
         return arr;
@@ -1019,19 +1019,19 @@ Pinyin.getFilterArrAll = function (arr, search) {
     if (!Array.isArray(arr)) {
         console.warn('搜索数据非数组')
         rslt = arr.filter((t) => {
-            t && (t + "").indexOf(search) != -1
+            return (t && (t + "").indexOf(search) != -1)
         });// 比如{id:111}+''-->0 错误
     } else {
         rslt = arr.filter((t) => {
-            t && JSON.stringify(t).indexOf(search) != -1
+            return (t && JSON.stringify(t).indexOf(search) != -1)
         });
     }
     if (rslt.length === 0) {
         rslt = arr.filter((t) => {
-            Pinyin.search(t + "", search)
+            return (SearchUtil.search(JSON.stringify(t) + "", search))
         })
     }
     return rslt
 }
 
-export default Pinyin;
+export default SearchUtil;
